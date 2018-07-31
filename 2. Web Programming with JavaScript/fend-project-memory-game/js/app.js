@@ -140,11 +140,11 @@ function unmatchAnimate(x){
 
 
 // Get the number how many movement to finish the game.  
-let counts = 1;
+let numOfMatches = 1;
 function addCount(){
-    document.getElementsByClassName('moves')[0].innerHTML = counts;
-    passValue(counts);
-    counts++
+    document.getElementsByClassName('moves')[0].innerHTML = numOfMatches;
+    passValue(numOfMatches);
+    numOfMatches++
 }
 
 
