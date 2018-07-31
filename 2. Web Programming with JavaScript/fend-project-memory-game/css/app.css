@@ -324,9 +324,14 @@ h1 {
 }
 
 .move-result{
+  display: inline-block;
   font-size: 20px !important;  
 }
 
+.star-result{
+  display: inline-block;
+  font-size: 20px !important;
+}
 /*
 check animation
  */

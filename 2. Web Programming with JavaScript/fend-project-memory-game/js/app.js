@@ -40,32 +40,32 @@ document.getElementsByClassName('start')[0].addEventListener('click',function(){
     }else{
         return false;
     }
-    console.log(number);
 },false)
 
 
-
 document.getElementById('deck_container').addEventListener("click", function(e){
-    // The "open" and "show" classes will be added in the class it belong to.
+    // The "open" and "show" classes will be added in the class it belong to.    
+    // console.log(e);
     let targetValue = e.target;
+    // console.log(targetValue)
     openCard(targetValue);
     // clicked icon will be recognized by its icon class name.
 	let clickedClass = targetValue.children[0].classList[1];
     lists.push([clickedClass.toString(), e.target.id]);
     // if 'lists' length is 2, two clicked icon will be compared whether it's same or not.
     if(lists.length === 2){
-        // set condtion to get the same 'class' but different 'id' 
+        // set condtion to get the same 'class' but different 'id'
+        // e.preventDefault();
         if(lists[0][0] === lists[1][0] && lists[0][1] != lists[1][1]){
         addCount();
         let matched1 = document.getElementById(lists[0][1]);
         let matched2 = document.getElementById(lists[1][1]);
-        console.log(matched1.id);
-        console.log(matched2.id);
         matchAnimate(matched1);
         matchAnimate(matched2);  
         lists = [];
         }else if (lists[0][1] === lists[1][1]){
             lists.pop([clickedClass.toString(), e.target.id]);
+            lists = [];
         }else{
             // if two cards aren't same the cards will be closed with animation effect.
             addCount();
@@ -79,12 +79,16 @@ document.getElementById('deck_container').addEventListener("click", function(e){
                 lists = [];
             }, 350);
         }
+    }else if(lists.length > 2){
+        console.log(e.target);
+        e.preventDefault();
+        lists = [];
+    }
     // If every game is finished, the screen will be redirect to 'complete.html' to show result.
     let matchedComplete = document.getElementsByClassName('match');
     if(matchedComplete.length === 16){
-    window.location.href = "complete.html";    
-    }
-  }
+    window.location.href = "complete.html"; 
+}  
 }, false);
 
 
@@ -149,10 +153,41 @@ function addCount(){
 
 
 // The result of counting movement will be send 'complete.html' to show final result.
-function passValue (num) {
-   localStorage.setItem("storageName",num);
+function passValue(num) {
+    rateStar(num); 
+    localStorage.setItem("moveResult",num);
 }
 
+
+// Rate star when movement number reach at 8, 12, 16
+// If number of movement reach at over 16, it will return no(0) star.
+// and result of num of star will be send to 'complete.html'.
+function rateStar(num){
+    let stars = document.getElementsByClassName('stars')[0].getElementsByTagName('li');
+    let numOfStar = 3;
+    if (num === 8){
+        stars[2].getElementsByTagName('i')[0].classList.remove('fa-star');
+        stars[2].getElementsByTagName('i')[0].classList.add('fa-star-o');
+        numOfStar = 2       
+    }
+    else if (8 < num && num < 12){
+        numOfStar = 2; 
+    }
+    else if (num === 12){
+        stars[1].getElementsByTagName('i')[0].classList.remove('fa-star');
+        stars[1].getElementsByTagName('i')[0].classList.add('fa-star-o');
+        numOfStar = 1;      
+    }
+    else if (12< num && num < 16){
+        numOfStar = 1; 
+    }
+    else if (16 <= num){
+        stars[0].getElementsByTagName('i')[0].classList.remove('fa-star');
+        stars[0].getElementsByTagName('i')[0].classList.add('fa-star-o');
+        numOfStar = 0;      
+    }
+    localStorage.setItem("starResult", numOfStar);    
+};
 
 /*
  * set up the event listener for a card. If a card is clicked:
