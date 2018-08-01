@@ -3,8 +3,8 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [Game Rule](#gamerule)
-* [Game Evaluate](#gameevaluate)
+* [GameRule](#gamerule)
+* [GameEvaluate](#gameevaluate)
 
 ## Instructions
 
@@ -12,7 +12,7 @@ This repository is one of project in the Udacity Front-End Nanodegreee course. T
 This project is about memory game that completely browser-based card matching game. To get started, open 'index.html'.
 
 
-## Game Rule
+## GameRule
 
 The game board consists of sixteen "cards" arranged in a grid. The deck is made up of eight different pairs of cards, each with different symbols on one side. The cards are arranged randomly on the grid with the symbol face down.
 
@@ -28,7 +28,7 @@ There are three elements to evaluate your game.
 
 
 
-## Game Evaluate
+## GameEvaluate
 After game finished, 'complete.html' will be pop up to show result of game. At here tree elements that mentioned in [Game Rule](#gamerule) as three elements to evaluate game.
 
 
