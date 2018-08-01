@@ -3,12 +3,13 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [Contributing](#contributing)
+* [Game Rule](#gamerule)
+* [Game Evaluate](#gameevaluate)
 
 ## Instructions
 
 This repository is one of project in the Udacity Front-End Nanodegreee course. This project consists of HTML , css and js file.  
-This project is about memory game that completely browser-based card matching game. To get started, open 'index.html' and enjoy the game.
+This project is about memory game that completely browser-based card matching game. To get started, open 'index.html'.
 
 
 ## Game Rule
@@ -25,7 +26,10 @@ There are three elements to evaluate your game.
 3. Run Time
 - Run time will be start as you click start button. And will be terminated when you finish the game.  
 
-If you find whole pairs of cards, 'complete.html' will be pop up to show result of game. It has star
 
 
-## sdfjk
+## Game Evaluate
+After game finished, 'complete.html' will be pop up to show result of game. At here tree elements that mentioned in [Game Rule](#gamerule) as three elements to evaluate game.
+
+
+
