@@ -23,11 +23,11 @@ If find all pairs of matched cards, game will be finished and it will show you r
 ## GameEvaluate
 
 There are three elements to evaluate your game.
-**1. Nubmer of Star**
+**Nubmer of Star**
 - Three fully colored stars will be shown at the frist time. As number of movement increase, fully colored star will be replaced by empty color star. Its term is 8th, 12th, 16th movement. So after 16th movement, there are no fully colored star. 
-**2. Number of Movement**
+**Number of Movement**
 - Ths number of movement will be increase whenever you click pair of cards.
-**3. Run Time**
+**Run Time**
 - Run time will be start as you click start button. And will be terminated when you finish the game.  
 
 After game finished, 'complete.html' will be pop up to show result of game. At here tree elements that mentioned in [GameRule](#gamerule) as three elements to evaluate game.
