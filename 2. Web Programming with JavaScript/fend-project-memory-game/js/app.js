@@ -21,6 +21,7 @@ const cardsContainer = document.getElementById('deck_container').getElementsByTa
 const shuffledCards = shuffle(cards);
 
 
+
 // Before start, shuffle cards randomly
 // the icon list in variable 'cards' will be randomly added to card.
 let num = 0;
@@ -35,19 +36,22 @@ for(i=0; i< cardsContainer.length; i++){
 let number = 1
 document.getElementsByClassName('start')[0].addEventListener('click',function(){
     if(number === 1){
-    startFlip(cardsContainer); 
+    startFlip(cardsContainer);
     number++;
     }else{
         return false;
     }
 },false)
 
+// If restart button is clicked, it redirect to 'index.html'(Back to the beginning) 
+document.getElementsByClassName('restart')[0].addEventListener('click', function(e){
+    window.location.href = "index.html";
+}, false)
 
-document.getElementById('deck_container').addEventListener("click", function(e){
-    // The "open" and "show" classes will be added in the class it belong to.    
-    // console.log(e);
+
+document.getElementById('deck_container').addEventListener("click", function(e){ 
     let targetValue = e.target;
-    // console.log(targetValue)
+    // The "open" and "show" classes will be added in the class it belong to.      
     openCard(targetValue);
     // clicked icon will be recognized by its icon class name.
 	let clickedClass = targetValue.children[0].classList[1];
@@ -69,26 +73,21 @@ document.getElementById('deck_container').addEventListener("click", function(e){
         }else{
             // if two cards aren't same the cards will be closed with animation effect.
             addCount();
-            setTimeout(function(){
-                let matched1 = document.getElementById(lists[0][1]);
-                let matched2 = document.getElementById(lists[1][1]);
-                unmatchAnimate(matched1);
-                unmatchAnimate(matched2);
-                closeCard(matched1);
-                closeCard(matched2);            
-                lists = [];
-            }, 350);
+            let matched1 = document.getElementById(lists[0][1]);
+            let matched2 = document.getElementById(lists[1][1]);
+            unmatchAnimate(matched1);
+            unmatchAnimate(matched2);
+            closeCard(matched1);
+            closeCard(matched2);            
+            lists = [];
         }
-    }else if(lists.length > 2){
-        console.log(e.target);
-        e.preventDefault();
-        lists = [];
-    }
+    }   
     // If every game is finished, the screen will be redirect to 'complete.html' to show result.
     let matchedComplete = document.getElementsByClassName('match');
     if(matchedComplete.length === 16){
-    window.location.href = "complete.html"; 
-}  
+    end();    
+    window.location.href = "complete.html";      
+    }
 }, false);
 
 
@@ -108,7 +107,9 @@ function startFlip(x){
         for(i=0; i<x.length; i++){
         x[i].classList.remove('open', 'show');
     }},10000);
-}};
+}
+start();
+};
 
 
 function shuffle(array) {
@@ -123,6 +124,23 @@ function shuffle(array) {
     return array;
 };
 
+
+// start, end functions are for calculating running time.
+// start function executes when start button clicked
+// end function executes when game is over.
+function start() {
+  startTime = new Date();
+};
+
+function end() {
+  endTime = new Date();
+  var timeDiff = endTime - startTime; //in ms
+  // strip the ms
+  timeDiff /= 1000;
+  // get seconds 
+  var seconds = Math.round(timeDiff);
+  localStorage.setItem("runningTime", seconds);  
+}
 
 // When two continuous clicked cards are match, the two cards adjusted 'hvr-pulse-grow' effect.
 function matchAnimate(x){

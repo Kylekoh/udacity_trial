@@ -50,6 +50,9 @@ h1 {
   cursor: pointer;
 }
 
+.reset{
+  cursor: pointer;
+}
 
 .deck {
     width: 660px;
@@ -63,6 +66,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin: 0 0 3em;
+    pointer-events: none !important;
 }
 
 .deck .card {
@@ -77,6 +81,7 @@ h1 {
     justify-content: center;
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    pointer-events: auto;
 }
 
 .deck .card.open {
@@ -260,6 +265,11 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+    margin-left: 5px;
+}
+
+.score-panel .restart i{
+   padding-right: 5px;
 }
 
 
@@ -284,6 +294,7 @@ h1 {
 
 .word span{
   display: flex;
+  height: 50px;
   align-content: center;
   align-items: center;
   justify-content: center; 
@@ -325,12 +336,20 @@ h1 {
 
 .move-result{
   display: inline-block;
-  font-size: 20px !important;  
+  font-size: 25px !important; 
+  color: #00CFBA; 
 }
 
 .star-result{
   display: inline-block;
-  font-size: 20px !important;
+  font-size: 25px !important;
+  color: #00CFBA;
+}
+
+.time-result{
+  display: inline-block;
+  font-size: 25px !important;
+  color: #1FB4E2;
 }
 /*
 check animation
