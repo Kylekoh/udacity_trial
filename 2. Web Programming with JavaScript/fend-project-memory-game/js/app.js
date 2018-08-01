@@ -65,7 +65,9 @@ document.getElementById('deck_container').addEventListener("click", function(e){
         let matched1 = document.getElementById(lists[0][1]);
         let matched2 = document.getElementById(lists[1][1]);
         matchAnimate(matched1);
-        matchAnimate(matched2);  
+        matchAnimate(matched2);
+        afterMatch(matched1);
+        afterMatch(matched2);
         lists = [];
         }else if (lists[0][1] === lists[1][1]){
             lists.pop([clickedClass.toString(), e.target.id]);
@@ -93,6 +95,11 @@ document.getElementById('deck_container').addEventListener("click", function(e){
 
 function openCard(object){
     object.classList.add("open", "show");
+}
+
+// after clicked two cards matched, disable click function to prevent heappening click event with another card.
+function afterMatch(object){
+    object.style.pointerEvents = 'none';
 }
 
 function closeCard(object){
