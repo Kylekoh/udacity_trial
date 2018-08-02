@@ -39,7 +39,7 @@ h1 {
 
 .fa-angellist::before{
   margin-right: 5px;
-  margin-left: 60px;
+  margin-left: 30px;
 }
 
 
@@ -107,6 +107,34 @@ h1 {
     background: #E94E45;
     font-size: 33px;
 }
+
+
+/*media query*/
+@media screen and (max-width: 760px){
+  .deck {
+    width: 450px;
+    min-height: 462px;
+    padding: 18px;
+  }
+  .deck .card{
+    width: 85px;
+    height: 85px;
+  }
+}
+
+
+@media screen and (max-width: 520px){
+  .deck {
+    width: 300px;
+    min-height: 310px;
+    padding: 18px;
+  }
+  .deck .card{
+    width: 58px;
+    height: 58px;
+  }
+}
+
 
 /*
 * animation effect
@@ -245,7 +273,8 @@ h1 {
  */
 
 .score-panel {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     width: 345px;
     margin-bottom: 10px;
 }
@@ -262,10 +291,12 @@ h1 {
     display: inline-block;
 }
 
+
 .score-panel .restart {
     float: right;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 30px;
+
 }
 
 .score-panel .restart i{
