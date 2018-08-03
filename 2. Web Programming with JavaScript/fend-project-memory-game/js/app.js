@@ -87,7 +87,7 @@ document.getElementById('deck_container').addEventListener("click", function(e){
     // If every game is finished, the screen will be redirect to 'complete.html' to show result.
     let matchedComplete = document.getElementsByClassName('match');
     if(matchedComplete.length === 16){
-    end();    
+    stop();    
     window.location.href = "complete.html";      
     }
 }, false);
@@ -135,19 +135,7 @@ function shuffle(array) {
 // start, end functions are for calculating running time.
 // start function executes when start button clicked
 // end function executes when game is over.
-function start() {
-  startTime = new Date();
-};
 
-function end() {
-  endTime = new Date();
-  var timeDiff = endTime - startTime; //in ms
-  // strip the ms
-  timeDiff /= 1000;
-  // get seconds 
-  var seconds = Math.round(timeDiff);
-  localStorage.setItem("runningTime", seconds);  
-}
 
 // When two continuous clicked cards are match, the two cards adjusted 'hvr-pulse-grow' effect.
 function matchAnimate(x){
@@ -213,6 +201,24 @@ function rateStar(num){
     }
     localStorage.setItem("starResult", numOfStar);    
 };
+
+
+let timer = document.getElementById('timer');
+
+var watch = new Stopwatch(timer);
+
+
+function start(){
+    watch.start();
+}
+
+function stop(){
+    watch.stop();
+    console.log(result);
+    localStorage.setItem("timeResult", result);
+}
+
+
 
 /*
  * set up the event listener for a card. If a card is clicked:

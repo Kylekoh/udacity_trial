@@ -15,7 +15,7 @@ document.getElementsByClassName('move-result')[0].innerHTML = localStorage.getIt
 
 document.getElementsByClassName('star-result')[0].innerHTML = localStorage.getItem("starResult");
 
-document.getElementsByClassName('time-result')[0].innerHTML = localStorage.getItem("runningTime");
+document.getElementsByClassName('time-result')[0].innerHTML = localStorage.getItem("timeResult");
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
