@@ -1,0 +1,162 @@
+/*header part css*/
+
+header{
+	display: flex;
+	flex-direction: row;
+	max-width: 1200px;
+	margin: 0 auto;
+	border: 1px solid red;
+	width: 100%;
+	min-height: 150px;
+}
+
+.header-left{
+	box-sizing: inherit;
+	height: 150px;
+	flex : 2;
+	border : 1px solid green;
+}
+
+.header-right{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 32px;
+	height: 150px;
+	flex : 8;
+}
+
+.logo{
+	float: left;
+}
+
+.logo-image{
+	width: 150%;
+}
+.personal-container{
+	float: right;
+}
+
+.name{
+	float: right;
+	font-size: 80px;
+}
+.career{
+	font-size: 25px;
+}
+
+/*main part css*/
+main{
+	display: flex;
+	flex-direction: row;
+	max-width: 1200px;
+/*	border: 2px solid black;
+*/	margin: 0 auto;
+}
+
+.main-left{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	flex: 2;
+	border : 1px solid black;
+	height: 800px;
+}
+
+
+.main-right{
+	flex: 8;
+/*	border: 1px solid gray;
+*/	height: 900px;
+}
+
+.show-color{
+	width : 90px;
+	min-height: 90px;
+}
+
+.show-color span{
+	margin-bottom: 30px;
+}
+
+.color1{
+	margin-top: 30px;
+	background-color: #02b3e4;
+}
+
+.color2{
+	background-color: #2d3c49;
+}
+.color3{
+	background-color: #7d97ad;
+}
+.color-name{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+.main-image{
+	display: flex;
+	flex-direction: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-image img{
+	width: 980px;
+	height: 450px;
+	margin : 40px 0px;
+	margin-top: 5px solid darkgray;
+}
+
+.footer-word{
+
+	font-size: 40px;
+	color: #7d97ad;
+	padding-left: 30px;
+	margin-top: 20px;
+
+}
+.footer-image{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.footer-image img{
+	width: 300px;
+	height: 200px;
+	padding: 0 20px;
+
+}
+
+.footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.image-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.image-name{
+	margin-top: 15px;
+	font-size: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
