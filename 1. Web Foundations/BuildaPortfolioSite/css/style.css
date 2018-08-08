@@ -1,21 +1,20 @@
 /*header part css*/
-html{
+html {
 	box-sizing: border-box;
 	font-size: 62.5%;
 }
 
-body{
+body {
 	margin: 30px auto;
 	max-width: 1200px; 
-	line-height: 1.4;
-	
-	
+	line-height: 1.4;	
 }
-img{
+
+img {
 	max-width: 100%;
 }
 
-.wrapper{
+.wrapper {
 	display: grid;
 	grid-template-columns: 1fr;
  
@@ -23,15 +22,13 @@ img{
 	margin: 0 auto;
 }
 
-header{
+header {
 	display: grid;
 	grid-template-columns: 0.7fr 3.3fr;
 	margin : 20px;
 }
 
-
-
-.header-right{
+.header-right {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 	align-items: center;
@@ -39,100 +36,98 @@ header{
 	border-bottom: 4px solid #7d97ad;
 }
 
-.logo img{
+.logo img {
 	height: 90px;
 	width: 100px;
 	margin-left: -2rem; 
 }
 
-.personal-container{
+.personal-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
 }
 
-.name{
+.name {
 	font-size: 7rem;
 	font-family: 'Do Hyeon', sans-serif;
 
 }
-.career{
+
+.career {
 	margin-top: -20px;
 	font-size: 1.8rem;
 	font-family: 'Quicksand', sans-serif;
 	padding-right: 3px;
 }
 
-/*main part css*/
-main{
+/*main part */
+
+main {
 	display: grid;
 	grid-template-columns: 0.7fr 3.3fr;
 	margin: 20px;
-
 }
 
-.main-left{
+.main-left {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
 	margin-top: -75px;
-
 }
 
-.show-color{
+.show-color {
 	width : 6rem;
 	min-height: 6rem;
 }
 
-.show-color span{
+.show-color span {
 	margin-bottom: 30px;
 }
 
-.color1{
+.color1 {
 	margin-top: 40px;
 	background-color: #02b3e4;
 }
 
-.color2{
+.color2 {
 	background-color: #2d3c49;
 }
-.color3{
+
+.color3 {
 	background-color: #7d97ad;
 }
-.color-name{
+
+.color-name {
 	margin-top: 1rem;
 	margin-bottom: 2rem;
 	font-size: 2rem;
 	font-family: 'Quicksand', sans-serif;
-
 }
-.main-right{
+
+.main-right {
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.main-image{
+.main-image {
 	display: grid;
 	grid-template-columns: 1fr auto;
 	max-height: 400px;
 	min-height: 50px;
-
 }
 
-.main-image img{
+.main-image img {
 	margin: 0 auto;
 	width: 100%;
 	max-height: 350px;
 }
 
-
-
-
-.footer-word{
+.footer-word {
 	display: inline-block;
 	font-family: 'Quicksand', sans-serif;
 	font-size: 2.8rem;
@@ -140,108 +135,113 @@ main{
 	padding-left: 0.5rem;
 	margin-top:20px;
 	margin-bottom: 10px;
-	
-
-
 }
-.footer{
+
+.footer {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 20px;
 }
 
-.footer-image img{
+.footer-image img {
 	width: 100%;
 	max-height: 150px;
 }
 
-
-
-.image-container{
+.image-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.image-name{
+.image-name {
 	font-family: 'Do Hyeon', sans-serif;
 	font-size: 3rem;
 }
 
-.image-address{
+.image-address {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 1.5rem;
 	margin-top: -8px;
 }
 
+
+
 /* Media Quries */
 
-@media(max-width: 750px){
-	.footer{
+@media(max-width: 750px) {
+	.footer {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.show-color{
+	.show-color {
 		width : 5rem;
 		min-height: 5rem;
 	}
-	.color-name{
+
+	.color-name {
 		font-size: 1.5rem;
 	}
-	.logo img{
-	height: 70px;
-	width: 80px;
+
+	.logo img {
+		height: 70px;
+		width: 80px;
 	}
+
 	.name {
 		font-size: 6rem;
 	}
+
 	.career {
 		font-size: 1.5rem;
 	}
-	.image-name{
+
+	.image-name {
 		font-size: 2rem;
 	}
 }
 
-@media(max-width: 500px){
-	.footer{
+@media(max-width: 500px) {
+	.footer {
 		grid-template-columns: 1fr;
 	}
-	.show-color{
+
+	.show-color {
 		width : 4rem;
 		min-height: 4rem;
-
 	}
-	.color-name{
+
+	.color-name {
 		font-size: 1rem;
 	}
-	.logo img{
-	height: 50px;
-	width: 60px;
+
+	.logo img {
+		height: 50px;
+		width: 60px;
 	}
+
 	.name {
 		font-size: 5rem;
 	}
+
 	.career {
 		font-size: 1.2rem;
 	}
-	.header-right{
+
+	.header-right {
 		margin-bottom: -20px;
 	}
-	.logo{
+
+	.logo {
 		margin-bottom: -20px;
 	}
-	.personal-container{
+
+	.personal-container {
 		margin-bottom: -20px;
 	}
-	.main-left{
+
+	.main-left {
 		margin-top: -55px;
 	}
 }
-
-
-
-
-
-
