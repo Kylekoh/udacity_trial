@@ -1,0 +1,3 @@
+[submodule "3.ExploringJS/frontend-nanodegree-arcade-game"]
+	path = 3.ExploringJS/frontend-nanodegree-arcade-game
+	url = https://github.com/Kylekoh/frontend-nanodegree-arcade-game.git
