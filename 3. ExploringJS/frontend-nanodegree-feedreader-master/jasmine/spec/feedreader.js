@@ -89,7 +89,17 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+         beforeEach(function(done) {
+            loadFeed(0, function() {
+                done();
+            });
+         })
 
+         it('loadFeed function is called', function(done) {
+            var container = $('.feed')           
+            expect(container.length).toBeGreaterThan(0);
+            done();
+         });
     });
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
@@ -97,6 +107,17 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+         beforeEach(function(done) {
+            loadFeed(0, function() {
+                done();
+            });
+         });
+
+         it('is loaded', function(done) {
+            var container = $('.feed')           
+            expect(container.length).toBeGreaterThan(0);
+            done();
+         });
 
     });
 }());

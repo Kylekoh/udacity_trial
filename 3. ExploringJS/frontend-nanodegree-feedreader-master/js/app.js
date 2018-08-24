@@ -42,21 +42,19 @@ function init() {
  */
  function loadFeed(id, cb) {
      var feedUrl = allFeeds[id].url,
-         feedName = allFeeds[id].name;
-
+         feedName = allFeeds[id].name;    
      $.ajax({
        type: "POST",
        url: 'https://rsstojson.udacity.com/parseFeed',
        data: JSON.stringify({url: feedUrl}),
        contentType:"application/json",
        success: function (result, status){
-
                  var container = $('.feed'),
                      title = $('.header-title'),
                      entries = result.feed.entries,
                      entriesLen = entries.length,
                      entryTemplate = Handlebars.compile($('.tpl-entry').html());
-
+                 console.log(container);       
                  title.html(feedName);   // Set the header text
                  container.empty();      // Empty out all previous entries
 
