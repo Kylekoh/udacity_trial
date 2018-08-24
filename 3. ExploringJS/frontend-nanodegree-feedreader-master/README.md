@@ -12,8 +12,8 @@ It is about how to do unit test in web application using Jasmine library.
 * How to download
 1. Use git clone.
 2. Download zipped archive in Github interface.
-* You can find test suites in 'jasmine/spec/feedreader.js'
-* Result of test will be shown at the downside of index.html.
+- You can find test suites in 'jasmine/spec/feedreader.js'
+- Result of test will be shown at the downside of index.html.
 
 
 ## What tested is this project?
@@ -28,4 +28,4 @@ It is about how to do unit test in web application using Jasmine library.
 
 
 ## Reference
-* [Jasmine](http://jasmine.github.io/)
+* [Jasmine Github](http://jasmine.github.io/)
