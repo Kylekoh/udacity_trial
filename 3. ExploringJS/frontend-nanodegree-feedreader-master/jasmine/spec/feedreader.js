@@ -21,6 +21,8 @@ $(function() {
          * allFeeds in app.js to be an empty array and refresh the
          * page?
          */
+
+        // check allFeeds are defined and not empty. 
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
@@ -108,14 +110,18 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
          beforeEach(function(done) {
+            $('.feed').empty();
             loadFeed(0, function() {
-                done();
+                fristFeed = $('.feed').html();
+                loadFeed(1, function() {
+                    done();
+                });                
             });
          });
 
-         it('is loaded', function(done) {
-            var container = $('.feed')           
-            expect(container.length).toBeGreaterThan(0);
+         it('is loaded function that actually changes', function(done) {     
+            var secondFeed = $('.feed').html();
+            expect(fristFeed).not.toEqual(secondFeed);
             done();
          });
 
