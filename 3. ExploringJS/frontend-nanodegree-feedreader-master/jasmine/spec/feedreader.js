@@ -69,7 +69,7 @@ $(function() {
          })
         // check container variation called by loadFeed function has a element.
          it('loadFeed function is called', function(done) {
-            var container = $('.feed')           
+            var container = $('.feed .entry-link');           
             expect(container.length).toBeGreaterThan(0);
             done();
          });
