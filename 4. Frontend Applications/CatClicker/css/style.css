@@ -1,0 +1,22 @@
+.main-container{
+	display: flex;
+	justify-content: space-around;
+}
+
+#cat-image1{
+	background-image: url("../img/cat1.jpg");
+	width: 500px;
+	height: 300px;
+}
+
+#cat-image2{
+	background-image: url("../img/cat2.jpg");
+	width: 500px;
+	height: 300px;
+}
+
+.image-container p{
+	text-align: center;
+	justify-content: center;
+	font-size: 30px;
+}
