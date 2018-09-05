@@ -1,42 +1,4 @@
-.main-container{
-	display: flex;
-	justify-content: center;
-	margin-top: 100px;
+.hidden {
+	visibility: hidden;
 }
 
-.main-container img{
-	width: 500px;
-	height: 400px;
-}
-
-.name-container {
-	width: 100px;
-	margin-right: 50px;
-	border: 1px solid black;
-	font-size: 30px;	
-}
-
-.name-container p{
-	border: 1px solid #ddd;
-	text-align: center;
-}
-
-#catName {
-	font-size: 30px;
-}
-
-.count-num-container {
-	width : 150px;
-	text-align: center;
-}
-
-.count-title{
-	font-size: 20px;
-	color: red;
-	border: 1px solid red;
-}
-
-#count-num {
-	font-size: 20px;
-	margin-top: 10px;
-}

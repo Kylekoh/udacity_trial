@@ -145,5 +145,18 @@ var catListView = {
     }
 };
 
+document.getElementById('admin-button').addEventListener('click', function(){
+    document.getElementsByClassName('admin-list')[0].classList.toggle('hidden');
+})
+
+document.getElementById('save-button').addEventListener('click', function(){
+    var newName = document.getElementById('admin-name').value;
+    var newImage = document.getElementById('admin-img').value;
+    var newCount = document.getElementById('admin-count').value;
+    model.cats.push({clickCount: newCount, name: newName, imgSrc: newImage})
+    catListView.render();
+});
+
+
 // make it go!
 octopus.init();
