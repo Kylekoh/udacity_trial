@@ -67,38 +67,38 @@ nav h1 a {
   text-transform: uppercase;
 }
 #breadcrumb {
-    padding: 10px 0 16px;
-    list-style: none;
-    background-color: #eee;
-    font-size: 17px;
-    margin: 0;
-    width: 100%;
+  padding: 10px 0 16px;
+  list-style: none;
+  background-color: #eee;
+  font-size: 17px;
+  margin: 0;
+  width: 100%;
 }
 
 /* Display list items side by side */
 #breadcrumb li {
-    display: inline;
+  display: inline;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
 #breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
-    margin-left: 20px;
-    margin-top: 5px;
+  color: #0275d8;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-top: 5px;
 }
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
+  color: #01447e;
+  text-decoration: underline;
 }
 /* ====================== Map ====================== */
 #map {
@@ -194,10 +194,7 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
-  /*position: absolute;*/
-  /*top: -50px;*/
   width: 100%;
-  /*z-index: 1000;*/
   display: block;
 }
 .inside #maincontent {
@@ -257,6 +254,7 @@ nav h1 a {
   width: 50%;
   display: grid;
   justify-items: center;
+  min-width: 400px;   
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -279,9 +277,10 @@ nav h1 a {
   list-style-type: none;
   margin: 0 auto;
   overflow: hidden;
-  padding: 0 20px 20px;
+  margin-bottom: 10px;
   position: relative;
   width: 85%;
+  border-radius: 20px 0 20px 0;
 }
 #reviews-list li p {
   margin: 0 0 10px;
@@ -292,41 +291,83 @@ nav h1 a {
 }
 #reviews-list li p:nth-child(1) {
   background: #333;
+  width: 44%;
+  height: 60px;
+  line-height: 60px;
   color: white;
+  font-size: 1.2rem;
+  text-align: left;
+  padding-left: 6%;
+  margin: 0;
 }
 #reviews-list li p:nth-child(2) {
   background: #333;
-  color: white;
+  width: 47%;
+  height: 60px;
+  line-height: 60px;
+  color: #CBCBCB;
+  font-size: 1.2rem;
+  text-align: right;
+  padding-right: 3%;
+  margin: 0;
 }
 #reviews-list li p:nth-child(3) {
   display: block;
-  width: 15%;
-  height: 30px;
+  width: 30%;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
-  vertical-align: middle;
   background: #FDA428;
   color: white;
+  margin-left: 5%;
+  margin-top: 3%;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.1rem;
+  border-radius: 7px;
 }
-
+#reviews-list li p:nth-child(4) {
+  margin: 0 5% 5% 5%;
+  color: #727272;
+  font-size: 1rem;
+}
 /* ===================== media query ====================== */
 @media (max-width: 1200px) {
   #restaurants-list {
     grid-template-columns: repeat(2, 1fr);
     max-width: 800px;
   }
+  #reviews-list li p:nth-child(1) {
+    font-size: 1rem;
+  }
+  #reviews-list li p:nth-child(2) {
+    font-size: 1rem;
+  }
+  #reviews-list li p:nth-child(3) {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+  }  
 }
 
 @media (max-width: 800px) {
-    #restaurants-list {
+  #restaurants-list {
     grid-template-columns: 1fr;
     max-width: 400px;
   }
+  #reviews-list li p:nth-child(3) {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }  
 }
 
 @media (max-width: 700px) {
   .filter-options select {
     width: 130px;
   }
+  #reviews-list li p:nth-child(3) {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  } 
 }
 @media (max-width: 500px) {
   nav h1 a {
@@ -344,5 +385,24 @@ nav h1 a {
     margin-left: 6%;
     width: 150px;
     font-size: 0.9rem;
-  } 
+  }
+  #restaurant-container, #reviews-container {
+    padding: 20px 0px 30px;
+    width: 40%;
+    min-width: 320px;   
+  }
+  #reviews-list li p:nth-child(4) {
+    font-size: 0.9rem;
+  }
+  #restaurant-name {
+    font-size: 16pt;
+    font-weight: 200;
+  }
+  #reviews-container h2 {
+    font-size: 20pt;
+  }
+  #footer {
+    font-size: 6pt;
+    letter-spacing: 0;
+  }
 }
