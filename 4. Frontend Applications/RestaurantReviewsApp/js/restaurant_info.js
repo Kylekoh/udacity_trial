@@ -80,10 +80,14 @@ fetchRestaurantFromURL = (callback) => {
  * Create restaurant HTML and add it to the webpage
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
-  const name = document.getElementById('restaurant-name');
+  const name = document.getElementById('restaurant-name'); 
+  name.tabIndex = 0;
+  name.setAttribute('aria-label', 'restaurant name');
   name.innerHTML = restaurant.name;
 
   const address = document.getElementById('restaurant-address');
+  address.tabIndex = 0;
+  address.setAttribute('aria-label', 'restaurant address');
   address.innerHTML = restaurant.address;
 
   const image = document.getElementById('restaurant-img');
@@ -92,6 +96,8 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.alt = "restaurant image"
 
   const cuisine = document.getElementById('restaurant-cuisine');
+  cuisine.tabIndex = 0;
+  cuisine.setAttribute('aria-label', 'restaurant cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
 
   // fill operating hours
@@ -107,6 +113,9 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
  */
 fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => {
   const hours = document.getElementById('restaurant-hours');
+  hours.tabIndex = 0;
+  hours.setAttribute('aria-label', 'restaurant hours');
+
   for (let key in operatingHours) {
     const row = document.createElement('tr');
 
@@ -116,6 +125,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 
     const time = document.createElement('td');
     time.innerHTML = operatingHours[key];
+
     row.appendChild(time);
 
     hours.appendChild(row);
@@ -138,6 +148,8 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     return;
   }
   const ul = document.getElementById('reviews-list');
+  ul.tabIndex = 0;
+  ul.setAttribute('aria-label', 'reviews list')
   reviews.forEach(review => {
     ul.appendChild(createReviewHTML(review));
   });
@@ -150,6 +162,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
+  li.tabIndex = 0;
   name.innerHTML = review.name;
   li.appendChild(name);
 
