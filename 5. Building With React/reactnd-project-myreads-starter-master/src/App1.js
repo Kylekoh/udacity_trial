@@ -59,7 +59,7 @@ class BooksApp extends React.Component {
             <div className="list-books-title">
               <h1>MyReads</h1>
             </div>
-            <BookList />
+
             <div className="list-books-content">
               <div>
                 <div className="bookshelf">

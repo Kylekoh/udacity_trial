@@ -15,7 +15,6 @@ class BookList extends Component {
 
   	const { book } = this.props
   	const { query } = this.state
-  	console.log(book)
 
   	// showingBooks.sort(sortBy('name'))
 
