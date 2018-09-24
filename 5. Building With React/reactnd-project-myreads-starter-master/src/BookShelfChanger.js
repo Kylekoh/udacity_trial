@@ -8,7 +8,6 @@ class BookShelfChanger extends Component {
 
   change(event) {
     this.setState({ value : event.target.value})
-    console.log(this.state.value)
   }
 
   render() {
@@ -22,7 +21,6 @@ class BookShelfChanger extends Component {
 	        <option value="read">Read</option>
 	        <option value="none">None</option>
 	      </select>
-	      <p>{this.state.value}</p>
 	    </div>
     );
   }

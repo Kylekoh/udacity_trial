@@ -59,11 +59,9 @@ class BooksApp extends React.Component {
           <div className="list-books-title">
             <h1>MyReads</h1>
           </div>
-    
           <BookShelf 
             books =  {books}
           />
-          
           <div className="open-search">
             <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
           </div>

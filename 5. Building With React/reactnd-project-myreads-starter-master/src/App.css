@@ -30,6 +30,19 @@ body, .app {
   padding: 0 10px 20px;
 }
 
+.bookshelf-books ol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.bookshelf-books ol li{
+  margin: 20px;
+}
+
+
 @media (min-width: 600px) {
   .bookshelf {
     padding: 0 20px 40px;
@@ -121,7 +134,6 @@ body, .app {
   list-style-type: none;
   padding: 0;
   margin: 0;
-
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
