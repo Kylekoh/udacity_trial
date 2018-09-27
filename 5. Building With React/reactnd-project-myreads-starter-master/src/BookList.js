@@ -9,13 +9,22 @@ import BookShelfChanger from './BookShelfChanger'
 
 class BookList extends Component {
   	state = {
-  		query:''
+  		query:'',
+  		selectOptionValue: 'WantToRead'
   	}
+
+  	onUpdateShelf = (e) => {
+  		const value = e.target.value;
+  		this.setState(() => ({
+  			selectOptionValue : value
+  		}));
+  	}
+
 
     render() {
 
   	const { book } = this.props
-  	const { query } = this.state
+  	const { query, selectOptionValue } = this.state
 
   	// showingBooks.sort(sortBy('name'))
 
@@ -23,7 +32,9 @@ class BookList extends Component {
 	    <div className="book">
 	      <div className="book-top">
 	        <div className="book-cover" style={{backgroundImage: `url("${book.imageLinks.thumbnail}")`}}></div>
-			<BookShelfChanger />
+			<BookShelfChanger 
+				onUpdateShelf = {this.onUpdateShelf}
+			/>
 	      </div>
 	      <div className="book-title">{book.title}</div>
 	      <div className="book-authors">{book.authors}</div>
@@ -33,4 +44,4 @@ class BookList extends Component {
 }
 
 
-export default BookList;
+export default BookList;3

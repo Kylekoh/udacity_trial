@@ -6,15 +6,12 @@ class BookShelfChanger extends Component {
   	value: ''
   }
 
-  change(event) {
-    this.setState({ value : event.target.value})
-  }
-
   render() {
+  	const { onUpdateShelf, book } = this.props;
 
     return (
 	    <div className="book-shelf-changer">
-	      <select onChange={this.change} value={this.state.value}> 
+	      <select onChange={(e) => onUpdateShelf(e)} value={this.state.value}> 
 	        <option value="move" disabled>Move to...</option>
 	        <option value="currentlyReading">Currently Reading</option>
 	        <option value="wantToRead">Want to Read</option>

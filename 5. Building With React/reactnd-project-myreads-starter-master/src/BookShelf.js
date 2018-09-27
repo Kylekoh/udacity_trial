@@ -16,16 +16,15 @@ const shelves = [
   	}
   ]
 
-class BookShelf extends Component {
-
+class BookShelf extends Component {	
 
   render() {
   	const { books } = this.props;
 
     return (
       <div className="list-books-content">
-        <div>
-        	{shelves.map((shelf) => (    
+        	{shelves.map((shelf) => ( 
+        	<div key={shelf.key}>		
 	          <div className="bookshelf">
 	            <h2 className="bookshelf-title">{shelf.name}</h2>
 	            <div className="bookshelf-books">      
@@ -38,8 +37,8 @@ class BookShelf extends Component {
 	              </ol>
 	            </div>
 	          </div>
-	        ))}    
-	    </div>       
+	        </div>  
+	        ))}           
       </div>  
     );
   }
