@@ -5,7 +5,7 @@ class BookShelfChanger extends Component {
   state = {
   	value: ''
   }
-
+  
   render() {
   	const { onUpdateShelf, book } = this.props;
 

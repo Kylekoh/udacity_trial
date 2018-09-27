@@ -21,6 +21,11 @@ class BookShelf extends Component {
   render() {
   	const { books } = this.props;
 
+  	function booksForShelf(shelfKey) {
+	  return books.filter(book => 
+		book.shelf === shelfKey)	
+	}
+
     return (
       <div className="list-books-content">
         	{shelves.map((shelf) => ( 
@@ -29,7 +34,7 @@ class BookShelf extends Component {
 	            <h2 className="bookshelf-title">{shelf.name}</h2>
 	            <div className="bookshelf-books">      
 	              <ol className="book-grid"> 
-	                {books.map((book) => (
+	                {booksForShelf(shelf.key).map((book) => (
 	                  <li key={book.id} className="contact-list-item">
 	                    <BookList book={book}/>
 	                  </li>

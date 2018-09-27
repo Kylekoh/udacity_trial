@@ -20,13 +20,10 @@ class BookList extends Component {
   		}));
   	}
 
-
     render() {
 
   	const { book } = this.props
   	const { query, selectOptionValue } = this.state
-
-  	// showingBooks.sort(sortBy('name'))
 
     return (
 	    <div className="book">
