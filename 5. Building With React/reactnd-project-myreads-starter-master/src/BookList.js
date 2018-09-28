@@ -26,6 +26,7 @@ class BookList extends Component {
 	        <div className="book-cover" style={{backgroundImage: `url("${book.imageLinks.thumbnail}")`}}></div>
 			<BookShelfChanger 
 				updateShelf = { updateShelf }
+				books = { books }
 				book = { book }
 			/>
 	      </div>
