@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BookList from './BookList';
+import PropTypes from 'prop-types'
 
 const shelves = [
   	{
@@ -17,9 +18,13 @@ const shelves = [
   ]
 
 class BookShelf extends Component {	
+  static propTypes = {
+    books: PropTypes.array.isRequired,
+    updateShelf: PropTypes.func.isRequired
+  }
 
   render() {
-  	const { books } = this.props;
+  	const { books, updateShelf } = this.props;
 
   	function booksForShelf(shelfKey) {
 	  return books.filter(book => 
@@ -36,7 +41,11 @@ class BookShelf extends Component {
 	              <ol className="book-grid"> 
 	                {booksForShelf(shelf.key).map((book) => (
 	                  <li key={book.id} className="contact-list-item">
-	                    <BookList book={book}/>
+	                    <BookList 
+	                    	book = { book }
+	                    	books = { books }
+	                    	updateShelf = { updateShelf }
+	                    />
 	                  </li>
 	                ))}
 	              </ol>

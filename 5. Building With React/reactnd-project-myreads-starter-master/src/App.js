@@ -3,6 +3,7 @@ import * as BooksAPI from './BooksAPI'
 import './App.css'
 import BookList from './BookList'
 import BookShelf from './BookShelf'
+import PropTypes from 'prop-types'
 
 class BooksApp extends React.Component {
 
@@ -22,15 +23,28 @@ class BooksApp extends React.Component {
     shelfChanger: []
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     BooksAPI.getAll().then((books) => {
       this.setState({ books });
       console.log(books);
     });
   }
 
+  updateShelf = ( newBook, newShelf ) => {
+    BooksAPI.update(newBook, newShelf).then(response => {
+      // set shelf for new or updated book
+      newBook.shelf = newShelf
+      // get list of books without updated or new book
+      var updatedBooks = this.state.books.filter(book => book.id !== newBook.id)
+      // add book to array and set newState
+      updatedBooks.push(newBook)
+      this.setState({books:updatedBooks})
+    })  
+  }
+
   render() {
     const { books, showSearchPage } = this.state;
+    const { updateShelf } = this
 
     return (
       <div className="app">
@@ -61,7 +75,8 @@ class BooksApp extends React.Component {
             <h1>MyReads</h1>
           </div>
           <BookShelf 
-            books =  {books}
+            books = { books }
+            updateShelf = { updateShelf }
           />
           <div className="open-search">
             <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
