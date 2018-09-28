@@ -52,6 +52,8 @@ class BooksApp extends React.Component {
         {this.state.showSearchPage ? (
           <SearchInput 
             showSearchPage = {showSearchPage}
+            updateShelf = { updateShelf }
+            books = { books }
           />
         ) : (
         <div className="list-books">

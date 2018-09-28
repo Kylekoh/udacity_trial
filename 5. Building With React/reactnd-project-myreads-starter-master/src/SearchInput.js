@@ -27,14 +27,13 @@ class search extends Component {
  	} else {
  	  this.setState({ newBooks:[], searchError:false })
  	}
+ 	console.log(this.state.newBooks)
   }
 
 
   render() {
-  	const { showSearchPage } = this.props
-    const { query } = this.state    
-
-
+  	const { showSearchPage, updateShelf, books } = this.props
+    const { query, newBooks, searchError } = this.state    
 
     return (
       <div className="search-books">
@@ -57,8 +56,23 @@ class search extends Component {
           </div>
         </div>
         <div className="search-books-results">
-          <ol className="books-grid">
-          </ol>
+        	{newBooks.length > 0 ? (
+	          <ol className="books-grid">
+	          	{newBooks.map((newBook) => (
+	         	  <li key={newBook.id}>
+	         	  	<BookList
+	         	  	  book = { newBook }	
+	         	  	  books = { books }
+	         	  	  updateShelf = { updateShelf }
+	         	  	/>
+	         	  </li>
+	          	))}
+	          </ol>
+	        ) : searchError && (
+	          <div>
+	          	<h3>Please type other word</h3>
+	          </div>
+	        )}  
         </div>
       </div>
     );
