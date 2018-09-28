@@ -28,7 +28,6 @@ class BooksApp extends React.Component {
   componentDidMount = () => {
     BooksAPI.getAll().then((books) => {
       this.setState({ books });
-      console.log(books);
     });
   }
 
@@ -51,7 +50,9 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         {this.state.showSearchPage ? (
-          <SearchInput />
+          <SearchInput 
+            showSearchPage = {showSearchPage}
+          />
         ) : (
         <div className="list-books">
           <div className="list-books-title">
