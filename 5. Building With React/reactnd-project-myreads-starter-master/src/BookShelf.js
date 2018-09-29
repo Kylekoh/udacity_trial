@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BookList from './BookList';
 import PropTypes from 'prop-types'
 
+// set collection of shelf as shelves
 const shelves = [
   	{
   		key: 'currentlyReading',
