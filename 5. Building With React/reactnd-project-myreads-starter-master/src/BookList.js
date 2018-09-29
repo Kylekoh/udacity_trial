@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import BookShelfChanger from './BookShelfChanger'
 
@@ -11,14 +10,9 @@ class BookList extends Component {
       updateShelf: PropTypes.func.isRequired
     }
 
-  	state = {
-  		query:''
-  	}
-
     render() {
 
   	const { books, book, updateShelf } = this.props
-  	const { query } = this.state
 
     return (
 	    <div className="book">
@@ -38,4 +32,4 @@ class BookList extends Component {
 }
 
 
-export default BookList;3
+export default BookList;

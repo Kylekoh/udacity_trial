@@ -4,9 +4,15 @@ import BookList from './BookList'
 import * as BooksAPI from './BooksAPI'
 import escapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
+import PropTypes from 'prop-types'
 
 
 class search extends Component {
+  static propTypes = {
+    query: PropTypes.string.isRequired,
+    newBooks: PropTypes.array.isRequired
+  }	
+
   state = {
   	query: '',
   	newBooks: [],
