@@ -21,7 +21,9 @@ class BooksApp extends React.Component {
   }
 
   componentDidMount = () => {
+    // get all the books data
     BooksAPI.getAll().then((books) => {
+      // set all the date from API as state in books
       this.setState({ books });
     });
   }
@@ -34,6 +36,7 @@ class BooksApp extends React.Component {
       var updatedBooks = this.state.books.filter(book => book.id !== newBook.id)
       // add book to array and set newState
       updatedBooks.push(newBook)
+      // set books state as a updated books
       this.setState({books:updatedBooks})
     })  
   }

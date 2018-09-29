@@ -26,6 +26,7 @@ class BookShelf extends Component {
   render() {
   	const { books, updateShelf } = this.props;
 
+  	// get the books which have a same shelf key
   	function booksForShelf(shelfKey) {
 	  return books.filter(book => 
 		book.shelf === shelfKey)	

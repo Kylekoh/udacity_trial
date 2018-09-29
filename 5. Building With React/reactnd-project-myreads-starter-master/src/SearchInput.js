@@ -17,11 +17,11 @@ class SearchInput extends Component {
   	searchError: false,
   }
 
-  // update query as typed
+  // update query as typed and trim it
   updateQuery = (query) => {
   	this.setState({ query: query.trim() })
   } 
-
+  // show results of search
   getBooks = (query) => {
     this.updateQuery(query);
  	if(this.state.query) {

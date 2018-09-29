@@ -13,8 +13,9 @@ class BookShelfChanger extends Component {
   render() {
   	const { updateShelf, books, book } = this.props;
 
+  	// default current shelf is 'none'
   	let currentShelf = 'none'
-  	
+  	// change shelf status by choosen value
   	books.forEach(b => {
   		if(b.id === book.id) {
   			currentShelf = b.shelf
