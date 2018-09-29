@@ -1,6 +1,6 @@
 # MyReads Project
 
-This project is the one of the React Course in Udacity's Frontend course. MyReads app provides three bookshelves which are `Currently Reading` `Want to Read` `Read`. It can be categorized by selecting shelf option. And it also has search input that provide results of search query and it also can be categorized by selecting option.
+MyReads app is the one of the React Course in Udacity's Frontend course. MyReads app provides three bookshelves which are `Currently Reading` `Want to Read` `Read`. It can be categorized by selecting shelf option. And it also has search input that provide results of search query and it also can be categorized by selecting option.
 
 ## TL;DR
 
@@ -80,14 +80,14 @@ search(query)
 
 ## Important
 The backend API uses a fixed set of cached search results and is limited to a particular set of search terms.
-```
+```bash
 'Android', 'Art', 'Artificial Intelligence', 'Astronomy', 'Austen', 'Baseball', 'Basketball', 'Bhagat', 'Biography', 'Brief', 'Business', 'Camus', 'Cervantes', 'Christie', 'Classics', 'Comics', 'Cook', 'Cricket', 'Cycling', 'Desai', 'Design', 'Development', 'Digital Marketing', 'Drama', 'Drawing', 'Dumas', 'Education', 'Everything', 'Fantasy', 'Film', 'Finance', 'First', 'Fitness', 'Football', 'Future', 'Games', 'Gandhi', 'History', 'History', 'Homer', 'Horror', 'Hugo', 'Ibsen', 'Journey', 'Kafka', 'King', 'Lahiri', 'Larsson', 'Learn', 'Literary Fiction', 'Make', 'Manage', 'Marquez', 'Money', 'Mystery', 'Negotiate', 'Painting', 'Philosophy', 'Photography', 'Poetry', 'Production', 'Program Javascript', 'Programming', 'React', 'Redux', 'River', 'Robotics', 'Rowling', 'Satire', 'Science Fiction', 'Shakespeare', 'Singh', 'Swimming', 'Tale', 'Thrun', 'Time', 'Tolstoy', 'Travel', 'Ultimate', 'Virtual Reality', 'Web Development', 'iOS'
 ```
 That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
 
 ## Reference
-[`Create-react-app`](#https://github.com/facebook/create-react-app)
-[`React Router Documentation`](#http://knowbody.github.io/react-router-docs/)
-[`Udacity Project Rubrics`](#https://review.udacity.com/#!/rubrics/918/view)
-[`Udacity Style Guide`](#http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
+* [`Create-react-app`](https://github.com/facebook/create-react-app)
+* [`React Router Documentation`](http://knowbody.github.io/react-router-docs/)
+* [`Udacity Project Rubrics`](https://review.udacity.com/#!/rubrics/918/view)
+* [`Udacity Style Guide`](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
 
