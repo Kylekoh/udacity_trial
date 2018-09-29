@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 
 
 class BookShelfChanger extends Component {
-	static propTypes = {
-	  books: PropTypes.array.isRequired,
-	  updateShelf: PropTypes.func.isRequired
-	}
+  static propTypes = {
+	books: PropTypes.array.isRequired,
+	book: PropTypes.object.isRequired,
+	updateShelf: PropTypes.func.isRequired
+
+  }
+
   render() {
   	const { updateShelf, books, book } = this.props;
 
@@ -33,4 +36,4 @@ class BookShelfChanger extends Component {
 }
 
 
-export default BookShelfChanger;
+export default BookShelfChanger

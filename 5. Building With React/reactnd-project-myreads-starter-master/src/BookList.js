@@ -7,7 +7,8 @@ import BookShelfChanger from './BookShelfChanger'
 class BookList extends Component {
     static propTypes = {
       books: PropTypes.array.isRequired,
-      updateShelf: PropTypes.func.isRequired
+      updateShelf: PropTypes.func.isRequired,
+      book: PropTypes.object.isRequired
     }
 
     render() {
